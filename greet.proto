@@ -1,0 +1,20 @@
+﻿syntax = "proto3";
+
+//option csharp_namespace = "GrpcService1";
+option csharp_namespace = "StandardLibraryProto";
+
+package greet;
+
+service Greeter {
+  rpc GetGrooveData (GrooveRequest) returns (GrooveResponse);
+}
+
+message GrooveRequest {
+  string endpoint = 1;
+  // Add other necessary fields
+}
+
+message GrooveResponse {
+  string responseData = 1;
+  // Add other necessary fields
+}
